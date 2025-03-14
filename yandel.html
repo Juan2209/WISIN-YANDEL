@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografía Completa de Wisin | MUSICTEPA</title>
+    <link rel="icon" href="img/icon/inicio.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Estilos específicos para la biografía detallada */
+        .biografia-detallada {
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .encabezado-biografia {
+            background-image: linear-gradient(to right, rgba(5, 7, 12, 0.8), rgba(5, 7, 12, 0.4)), url('../img/wisin-header.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--blanco);
+            text-align: center;
+            padding: 8rem 2rem;
+            margin-bottom: 4rem;
+            border-radius: 10px;
+        }
+
+        .encabezado-biografia h1 {
+            font-size: 5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .encabezado-biografia p {
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+
+        .foto-principal {
+            float: right;
+            width: 350px;
+            margin: 0 0 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .foto-principal {
+                float: none;
+                width: 100%;
+                margin: 0 0 2rem 0;
+            }
+        }
+
+        .seccion {
+            margin-bottom: 4rem;
+        }
+
+        .seccion h2 {
+            color: var(--azulClaro);
+            font-size: 3rem;
+            border-bottom: 3px solid var(--azulClaro);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .seccion h3 {
+            color: var(--azulOscuro);
+            font-size: 2.4rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .seccion p {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .seccion ul, .seccion ol {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+        }
+
+        .seccion li {
+            margin-bottom: 1rem;
+        }
+
+        .logros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .logro-item {
+            background-color: var(--azulOscuro);
+            color: var(--blanco);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .logro-item h4 {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        .logro-item p {
+            font-size: 1.6rem;
+            margin-bottom: 0;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .galeria img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        .cita {
+            font-style: italic;
+            font-size: 2.2rem;
+            color: var(--azulOscuro);
+            text-align: center;
+            margin: 4rem 0;
+            padding: 2rem;
+            border-left: 4px solid var(--azulClaro);
+            background-color: rgba(0, 111, 230, 0.1);
+        }
+
+        .cita cite {
+            display: block;
+            font-size: 1.6rem;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 3rem 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 4rem;
+            background-color: var(--azulClaro);
+            color: var(--blanco);
+            padding: 1.5rem 3rem;
+            font-size: 1.8rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .volver:hover {
+            background-color: var(--azulOscuro);
+        }
+    </style>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenido-navegacion">
+            <div class="logo">
+                <h2>MUSIC<span>TEPA</span></h2>
+            </div>
+            <nav class="navegacion ocultar">
+                <a href="index.html">Inicio</a>
+                <a href="Biografia.html">Biografía</a>
+                <a href="Discografía.html">Discografía</a>
+                <a href="Galeria.html">Galería</a>
+                <a href="Noticias.html">Noticias</a>
+                <a href="Contacto.html">Contacto</a>
+            </nav>
+            <div class="hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="encabezado-biografia">
+        <h1>Yandel: El Legendario</h1>
+        <p>Una carrera de éxitos, superación y reinvención</p>
+    </div>
+
+    <main class="biografia-detallada">
+        <img src="img/yandelconcierto.jpeg" alt="Wisin en concierto" class="foto-principal">
+
+        <section class="seccion">
+            <h2>Inicios y juventud</h2>
+            <p>Llandel Veguilla Malavé, conocido artísticamente como Yandel, nació el 14 de enero de 1977 en Cayey, Puerto Rico. Creció en el barrio Playa de Ponce, donde desde temprana edad mostró un interés innato por la música. Al igual que muchos artistas del género urbano, Yandel proviene de un entorno humilde, donde las oportunidades eran limitadas, pero su pasión por la música lo impulsó a perseguir sus sueños.</p>
+            
+            <p>Antes de alcanzar la fama, Yandel trabajó en diversos empleos para mantenerse, incluyendo un puesto como mesero. Durante este período, comenzó a participar en eventos locales de freestyle y competencias de rap, donde fue perfeccionando sus habilidades vocales y desarrollando su característico estilo melódico que posteriormente lo distinguiría en la industria.</p>
+            
+            <h3>El encuentro con Wisin</h3>
+            <p>El dúo comenzó a trabajar juntos a finales de los años 90, cuando ambos compartían su amor por el hip hop y el reggae. Inicialmente se presentaban como "Wisin & Yandel Los Reyes del Movimiento", un nombre que posteriormente se convertiría en profético para su carrera. Su química musical fue evidente desde el principio, con Wisin aportando su energía característica y Yandel su melodiosa voz.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Carrera musical</h2>
+            
+            <h3>Primeros pasos en la industria</h3>
+            <p>Wisin & Yandel lanzaron su primer álbum "Los Reyes del Nuevo Milenio" en 2000 bajo el sello Fresh Productions, que aunque no tuvo un impacto inmediato, sentó las bases para lo que vendría después. Continuaron trabajando arduamente en la escena underground del reggaetón, ganando reconocimiento local en Puerto Rico.</p>
+            
+            <p>El verdadero despegue de su carrera llegó con el álbum "De Nuevos a Viejos" (2001), que incluía colaboraciones con artistas como Daddy Yankee y Baby Ranks. Su estilo único, que mezclaba reggaetón con hip hop y R&B, comenzó a capturar la atención tanto de los fanáticos como de la industria musical.</p>
+            
+            <h3>La era dorada: 2005-2013</h3>
+            <p>La consolidación de Wisin & Yandel como "El Dúo de la Historia" llegó con álbumes como "Pa'l Mundo" (2005), "Los Vaqueros" (2006), "Wisin vs. Yandel: Los Extraterrestres" (2007) y "La Revolución" (2009). Durante esta época, dominaron las listas de popularidad con éxitos como "Rakata", "Llamé Pa' Verte", "Sexy Movimiento", "Abusadora" y "Me Estás Tentando".</p>
+            
+            <p>El dúo firmó con Universal Music Latino en 2008, ampliando su alcance internacional. Colaboraron con artistas de renombre mundial como Jennifer Lopez, T-Pain, 50 Cent, Aventura y Enrique Iglesias, llevando el reggaetón a audiencias globales.</p>
+            
+            <div class="logros-grid">
+                <div class="logro-item">
+                    <h4>Grammy Latino</h4>
+                    <p>Mejor Álbum de Música Urbana por "Los Vaqueros: El Regreso" (2011)</p>
+                </div>
+                <div class="logro-item">
+                    <h4>Billboard Latin Music Awards</h4>
+                    <p>Dúo del Año en múltiples ocasiones</p>
+                </div>
+                <div class="logro-item">
+                    <h4>Premios Lo Nuestro</h4>
+                    <p>Múltiples reconocimientos en categorías urbanas</p>
+                </div>
+            </div>
+            
+            <h3>Carrera como solista</h3>
+            <p>En 2013, Wisin & Yandel anunciaron una pausa en su carrera como dúo para enfocarse en proyectos solistas. Wisin lanzó su primer álbum en solitario "El Sobreviviente" ese mismo año, demostrando que podía mantener su éxito de manera independiente. El álbum incluía colaboraciones con artistas como Chris Brown, Ricky Martin y Jennifer Lopez.</p>
+            
+            <p>Su segundo álbum como solista, "El Regreso del Sobreviviente" (2014), consolidó su posición como uno de los principales exponentes del género urbano. En 2015, lanzó "Los Vaqueros: La Trilogía", un proyecto ambicioso que reunió a numerosos artistas del género. Su álbum "Victory" (2017) continuó con su racha de éxitos, incluyendo colaboraciones con Ozuna, Bad Bunny y Daddy Yankee.</p>
+            
+            <h3>Reunión con Yandel</h3>
+            <p>Después de años de carrera solista, Wisin & Yandel anunciaron su reunión en 2018. Lanzaron el álbum "Los Campeones del Pueblo / The Big Leagues" a finales de ese año, demostrando que su química musical permanecía intacta. En 2022, lanzaron "La Última Misión", que sirvió como su álbum de despedida antes de su gira final "La Última Misión World Tour".</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Faceta como productor y empresario</h2>
+            <p>Además de su carrera como artista, Wisin ha destacado como productor musical y empresario. En 2006, fundó junto a Yandel el sello discográfico WY Records, bajo el cual lanzaron varios proyectos y ayudaron a impulsar las carreras de artistas emergentes.</p>
+            
+            <p>Como productor, ha trabajado con artistas de la talla de Daddy Yankee, Ricky Martin, Jennifer Lopez y muchos más. Su visión musical ha ayudado a dar forma al sonido del reggaetón contemporáneo, influyendo en toda una generación de artistas urbanos latinos.</p>
+            
+            <p>Su olfato para los negocios también lo ha llevado a invertir en otros sectores, como bienes raíces y restaurantes en Puerto Rico. Ha lanzado su propia línea de ropa y ha participado en campañas publicitarias para marcas reconocidas.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Estilo musical y legado</h2>
+            <p>El estilo de Yandel Su estilo, una mezcla de reguetón clásico y letras innovadoras, transformó el panorama de la música latina, llevándola a niveles globales. En su faceta como solista, Yandel también ha demostrado ser una fuerza imparable.</p>
+            
+            <div class="cita">
+                "Yo soy de las personas que entendió que puedo comprar un carro costoso, puedo comprar un super reloj, el que todo el mundo le gusta, pero poder levantarte por la mañana y poder respirar, no lo puedo comprar. Así que es un regalo del cielo". "
+                <cite>- Yandel</cite>
+            </div>
+            
+            <p>Yandel se ha convertido en uno de los artistas más exitosos de la música en español gracias a su talento, carisma y versatilidad musical. Desde su etapa con Wisin hasta su carrera como solista, sus canciones han entrado en el gusto de millones de fanáticos alrededor del mundo. Si aún no has tenido la oportunidad de escuchar sus éxitos, te recomendamos que lo hagas y descubras por ti mismo el legado musical que ha dejado este artista en la industria latina.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Vida personal</h2>
+            <p>En julio de 2004, Yandel contrajo matrimonio con Edneris Espada Figueroa, su novia de toda la vida. La pareja tiene dos hijos: Adrián Yandel Veguilla, nacido el 25 de enero de 2001, y Dereck Adrián Veguilla, nacido el 27 de mayo de 2004. En una entrevista de 2016, Yandel expresó que su relación familiar estaba en su mejor momento, destacando la solidez que el tiempo había aportado a su matrimonio.</p>
+            
+            <p>Yandel mantiene una vida privada reservada, enfocándose en su carrera musical y en su familia.</p>
+            
+        </section>
+
+        <section class="seccion">
+            <h2>Impacto en la cultura popular</h2>
+            <p>La influencia de Wisin va más allá de la música. Ha aparecido en programas de televisión como juez en "La Voz" en su versión mexicana, llevando su experiencia y conocimiento a nuevas generaciones de artistas. Su presencia en redes sociales, donde cuenta con millones de seguidores, lo mantiene conectado con sus fans alrededor del mundo.</p>
+            
+            <p>Su estilo, tanto musical como personal, ha influenciado la cultura urbana latina, desde la moda hasta el lenguaje. Frases de sus canciones han pasado a formar parte del vocabulario popular, y su estética ha definido tendencias en la moda urbana.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Éxitos más destacados</h2>
+            <h3>Con Wisin & Yandel:</h3>
+            <ul>
+                <li>"Rakata" (2005)</li>
+                <li>"Llamé Pa' Verte" (2005)</li>
+                <li>"Pam Pam" (2006)</li>
+                <li>"Sexy Movimiento" (2007)</li>
+                <li>"Abusadora" (2009)</li>
+                <li>"Te Siento" (2009)</li>
+                <li>"Algo Me Gusta de Ti" (con T-Pain y Chris Brown) (2012)</li>
+                <li>"Sígueme y Te Sigo" (2015)</li>
+                <li>"Reggaetón en lo Oscuro" (2018)</li>
+                <li>"Chica Bombastic" (2019)</li>
+            </ul>
+            
+            <h3>Como solista:</h3>
+            <ul>
+                <li>"Que Viva la Vida" (con Michel Teló) (2013)</li>
+                <li>"Adrenalina" (con Jennifer Lopez y Ricky Martin) (2014)</li>
+                <li>"Vacaciones" (2016)</li>
+                <li>"Escápate Conmigo" (con Ozuna) (2017)</li>
+                <li>"Todo Comienza en la Disco" (con Yandel y Daddy Yankee) (2018)</li>
+                <li>"Mi Niña" (con Los Legendarios y Myke Towers) (2020)</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>Videografía seleccionada</h2>
+            <div class="video-container">
+                <iframe src="video/Wisin & Yandel - Dime Que Te Pasó.mp4" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="video/Daddy Yankee & Wisin y Yandel - Si Supieras (Video Oficial).mp4" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <a href="Biografia.html" class="volver">← Volver a Biografías</a>
+    </main>
+
+    <footer class="footer">
+        <div class="logo">
+            <h2>MUSIC<span>TEPA</span></h2>
+        </div>
+        <p>Todos los derechos reservados <span class="fecha"></span> &copy; Desarrollado por: Juan David</span></p>
+    </footer>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1047 @@
+:root{
+    --oscuro:#07070A;
+    --azulOscuro:#0A1128;
+    --azulClaro:#006FE6;
+    --blanco:#FEFCFB;
+    --titulos:'Josefin Sans', serif;
+    --parrafos: 'Montserrat', sans-serif;
+    
+}
+h1{
+    font-family: var(--titulos);
+}
+p{
+    font-family: var(--parrafos);
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+/*global*/
+h1,h2,h3{
+    font-family: var(--titulos);
+}
+p,a{
+    font-family: var(--parrafos);
+}
+.ocultar{
+    display: none;
+}
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+.btn{
+    padding: 1rem 3rem;
+    font-weight: bold;
+    font-family: var(--parrafos);
+    font-size: 2rem;
+    border: none;
+    color: var(--blanco);
+}
+.bordes{
+    border: 2px solid var(--azulClaro);
+    color: var(--azulClaro);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: background-color .3s ease-in-out;
+}
+.bordes:hover{
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.azul{
+    background-color: var(--azulClaro);
+}
+@keyframes desplazamiento{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+/*Encabezado*/
+.encabezado{
+    background-image: url('../img/wisin-y-yandel.gif');
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 70rem;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+
+}
+.encabezado2{
+    background-image: url('../img/Discografia.gif');
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 70rem;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+
+}
+@media(min-width: 768px){
+    .encabezado{
+        background-attachment: fixed;
+    }
+}
+
+.encabezado::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-color: rgba(0,0,0,0.5);/*color de la marca de agua del gif*/
+    z-index: -1;
+}
+.logo h2{
+    font-size: 3rem;
+}
+
+.logo h2 span{
+    color: var(--azulClaro);
+}
+.logo h2 {
+    color: var(--blanco); /*color para la letra music*/
+}
+
+
+.contenido-navegacion{
+    display: flex;
+    align-items: center; /*alineacion vertical*/
+    justify-content: space-around;
+    background-color: var(--oscuro); /*color para la barra de navegacion*/
+    box-shadow: 10px 10px 10px -6px rgba(255, 255, 255, 0.45);/*para el degradado de la barra*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.navegacion{
+    background-color: var(--oscuro);/*cambio de color para cuando se hace la pantalla chica*/
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    animation: desplazamiento .5s ease-in-out;
+}
+@media(min-width:768px){
+    .ocultar{
+        display: inline;
+    }
+}
+.navegacion a{
+    display: block;
+    font-size: 2rem;
+    padding: 1.1rem;
+    color: var(--blanco); /*letra de inicio, biografia, etc*/
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+}
+.navegacion a:hover{
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+@media(min-width:768px){
+    .navegacion a{
+        display: inline;
+    }
+}
+@media(min-width:768px){
+    .navegacion{
+        position: relative;
+        top: unset;
+        width: auto;
+        background-color: unset;
+        animation: unset;
+    }
+}
+.hamburguesa span{
+    width: 5rem;
+    height: 1rem;
+    border: 3px solid black;
+    background-color: var(--blanco);/*colo de la hamburgueza*/
+    display: block;
+
+}
+@media (min-width:768px){
+    .hamburguesa{
+        display: none;
+        
+        
+    }
+}
+/*contenido del encabezado*/
+@media(min-width:768px){
+    .contenido-encabezado{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 85%;
+    }
+    .contenido-encabezado{
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+.texto-encabezado h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--blanco);
+    padding-top: 35rem;
+
+}
+@media (min-width:768px){
+    .texto-encabezado h1{
+        font-size: 15rem;
+        text-align: center;
+        padding-top: 0;
+    }
+    
+}
+/* === ENCABEZADO - IMAGEN RESPONSIVA === */
+.imagen-encabezado {
+    width: 100%;
+    text-align: center;
+    padding-top: 8rem; /* Ajuste para que no quede pegada a la barra de navegación */
+}
+
+.imagen-encabezado img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* Opcional: esquinas redondeadas */
+}
+
+/* === HACER QUE LA IMAGEN SE ADAPTE EN TELÉFONOS === */
+@media (max-width: 768px) {
+    .imagen-encabezado img {
+        width: 90%; /* Reduce el tamaño de la imagen en móviles */
+    }
+}
+/*seccion sobre nosotros*/
+.nosotros h2{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--azulClaro);
+}
+@media(min-width:768px){
+    .nosotros h2{
+        font-size: 5rem;
+    }
+    
+}
+.contenido-nosotros{
+    background-image: url('../img/2.jpg');
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-size: cover;
+    background-position: center center;
+}
+@media(min-width:768px){
+    .contenido-nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        background-attachment: fixed;
+    }
+}
+.texto-nosotros{
+    padding: 4rem;
+    grid-row: 2/3;
+    background-color: var(--blanco);
+}
+@media(min-width:768px){
+    .texto-nosotros{
+        padding: 5rem;
+    }
+}
+.texto-nosotros h3{
+    font-size: 2.5rem;
+    color: var(--azulClaro);
+    text-align: center;
+}
+.texto-nosotros p{
+    font-size: 2rem;
+    text-align: center;
+}
+@media(min-width:768px){
+    .texto-nosotros p{
+        text-align: left;
+    }
+}
+/*footer*/
+.footer, .footer p{
+    text-align: center;
+}
+
+@media(min-width: 768px){
+    .footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+footer{
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 2rem 0;
+}
+/* === ESTILOS DEL MENÚ DE DISCOS === */
+.menu-discografia {
+    margin: 20px 0;
+}
+
+.menu-discografia ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.menu-discografia li {
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-discografia li:hover {
+    background-color: var(--azulOscuro);
+}
+
+
+/* === GALERÍA DE VIDEOS - GRID 5x5 === */
+.galeria-videos {
+    padding: 20px 0;
+    background-color: var(--azulOscuro);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.grid-videos iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* === HACER QUE LA GALERÍA SEA RESPONSIVA === */
+@media (max-width: 1024px) {
+    .grid-videos {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-videos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-videos {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas muy pequeñas */
+    }
+}
+/* === ESTILOS PARA BIOGRAFÍAS === */
+.biografias {
+    padding: 4rem 0;
+}
+
+.biografia-artista {
+    margin-bottom: 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.biografia-artista h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: blue;
+    margin-bottom: 3rem;
+}
+
+.biografia-artista h2 span {
+    color: red;
+}
+
+.contenido-biografia {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contenido-biografia {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+.imagen-biografia img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.datos-biografia h3 {
+    color: var(--azulClaro);
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.datos-biografia ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.datos-biografia li {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-family: var(--parrafos);
+}
+
+.datos-biografia .btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    background-color: #ADFF2F;
+    color: black;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.datos-biografia .btn:hover {
+    background-color: #8BC34A;
+}
+
+/* === ESTILOS PARA ESTADÍSTICAS === */
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.estadistica-item {
+    padding: 2rem;
+}
+
+.estadistica-item .numero {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: var(--titulos);
+    color: #333;
+}
+
+.estadistica-item .texto {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-family: var(--parrafos);
+    color: #666;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .estadistica-item .numero {
+        font-size: 3.5rem;
+    }
+    
+    .estadistica-item .texto {
+        font-size: 1.2rem;
+    }
+}
+/* Estilos específicos para la biografía detallada */
+.biografia-detallada {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.encabezado-biografia {
+    background-image: linear-gradient(to right, rgba(5, 7, 12, 0.8), rgba(5, 7, 12, 0.4)), url('../img/wisin-header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--blanco);
+    text-align: center;
+    padding: 8rem 2rem;
+    margin-bottom: 4rem;
+    border-radius: 10px;
+}
+
+.encabezado-biografia h1 {
+    font-size: 5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.encabezado-biografia p {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.foto-principal {
+    float: right;
+    width: 350px;
+    margin: 0 0 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .foto-principal {
+        float: none;
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+}
+
+.seccion {
+    margin-bottom: 4rem;
+}
+
+.seccion h2 {
+    color: var(--azulClaro);
+    font-size: 3rem;
+    border-bottom: 3px solid var(--azulClaro);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.seccion h3 {
+    color: var(--azulOscuro);
+    font-size: 2.4rem;
+    margin: 2rem 0 1rem;
+}
+
+.seccion p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.seccion ul, .seccion ol {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.seccion li {
+    margin-bottom: 1rem;
+}
+
+.logros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.logro-item {
+    background-color: var(--azulOscuro);
+    color: var(--blanco);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logro-item h4 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.logro-item p {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.cita {
+    font-style: italic;
+    font-size: 2.2rem;
+    color: var(--azulOscuro);
+    text-align: center;
+    margin: 4rem 0;
+    padding: 2rem;
+    border-left: 4px solid var(--azulClaro);
+    background-color: rgba(0, 111, 230, 0.1);
+}
+
+.cita cite {
+    display: block;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 3rem 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 4rem;
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+    background-color: var(--azulOscuro);
+}
+
+/* Estilos específicos para discografía */
+.grid-albumes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+.album {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: var(--blanco);
+    position: relative;
+}
+
+.album:hover {
+    transform: translateY(-10px);
+}
+
+.album-imagen {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+}
+
+.album-nombre {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--azulOscuro);
+    margin: 0;
+}
+
+.album-anio {
+    display: block;
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-weight: normal;
+}
+
+/* Estilos para el detalles del álbum (lista de canciones) */
+.album-detalles {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--blanco);
+    padding: 2rem;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+.album:target .album-detalles {
+    display: block;
+}
+
+.album-titulo {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--azulClaro);
+}
+
+.lista-canciones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cancion {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cancion:last-child {
+    border-bottom: none;
+}
+
+.cancion-titulo {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.cancion audio {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.btn-letra {
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-letra:hover {
+    background-color: var(--azulOscuro);
+}
+
+.volver-albums {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: var(--azulClaro);
+    font-size: 1.6rem;
+}
+
+.volver-albums:hover {
+    text-decoration: underline;
+}
+
+/* AGREGAR AL ARCHIVO estilos.css */
+
+/* === ESTILOS PARA LA GALERÍA DE ÁLBUMES === */
+.album-galeria {
+    padding: 4rem 0;
+}
+
+.album-titulo {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--azulClaro);
+    margin-bottom: 1rem;
+}
+
+.album-descripcion {
+    text-align: center;
+    font-size: 1.8rem;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.grid-albums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.album-item {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.album-item a {
+    text-decoration: none;
+    display: block;
+}
+
+.album-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.album-item h3 {
+    color: var(--azulOscuro);
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .grid-albums {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 2rem;
+    }
+    
+    .album-item img {
+        height: 150px;
+    }
+    
+    .album-item h3 {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+}
+
+/* === ESTILOS PARA PÁGINA DE DETALLE DE ÁLBUM === */
+.detalle-album {
+    padding: 4rem 0;
+}
+
+.cabecera-album {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .cabecera-album {
+        grid-template-columns: 1fr;
+    }
+}
+
+.portada-album {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-album h2 {
+    color: var(--azulClaro);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-album p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.datos-album {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.dato {
+    background-color: var(--azulOscuro);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+.lista-canciones {
+    margin-bottom: 4rem;
+}
+
+.lista-canciones h3 {
+    color: var(--azulClaro);
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--azulClaro);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cancion {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cancion-titulo {
+    font-size: 2rem;
+    color: var(--azulOscuro);
+    margin-bottom: 1.5rem;
+}
+
+.reproductor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.reproductor audio {
+    flex: 1;
+    min-width: 300px;
+}
+
+.btn-letra {
+    display: inline-block;
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-letra:hover {
+    background-color: var(--azulOscuro);
+}
+
+.volver-discografia {
+    display: inline-block;
+    background-color: var(--azulOscuro);
+    color: var(--blanco);
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.volver-discografia:hover {
+    background-color: var(--azulClaro);
+}
+
+/* === ESTILOS PARA PÁGINA DE LETRA === */
+.pagina-letra {
+    padding: 4rem 0;
+}
+
+.cabecera-letra {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.cabecera-letra h2 {
+    color: var(--azulClaro);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.cabecera-letra h3 {
+    color: var(--azulOscuro);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.reproductor-letra {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+}
+
+.letra-cancion {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.letra-cancion p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.botones-navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.btn-navegacion {
+    display: inline-block;
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-navegacion:hover {
+    background-color: var(--azulOscuro);
+}
