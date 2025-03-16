@@ -302,6 +302,7 @@ footer{
     background-color: var(--oscuro);
     color: var(--blanco);
     padding: 2rem 0;
+    font-size: 1.6rem;
 }
 /* === ESTILOS DEL MENÚ DE DISCOS === */
 .menu-discografia {
@@ -632,7 +633,7 @@ footer{
     margin: 3rem 0;
 }
 
-.video-container iframe {
+.video-container img {
     position: absolute;
     top: 0;
     left: 0;
