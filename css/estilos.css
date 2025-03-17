@@ -101,6 +101,7 @@ p,a{
     }
 }
 
+
 .encabezado::before{
     content: '';
     position: absolute;
