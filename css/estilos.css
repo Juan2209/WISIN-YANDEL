@@ -533,7 +533,19 @@ footer{
     }
 }
 
-
+@media (max-width: 480px) {
+    .estadistica-item {
+        flex-basis: 100%;
+    }
+    
+    .estadistica-item .numero {
+        font-size: 2rem;
+    }
+    
+    .estadistica-item .texto {
+        font-size: 0.9rem;
+    }
+}
 /* Estilos específicos para la biografía detallada */
 .biografia-detallada {
     max-width: 120rem;
