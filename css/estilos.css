@@ -262,6 +262,21 @@ p,a{
         background-attachment: fixed;
     }
 }
+/*Para el curriculum*/
+.curriculum{
+    background-image: url('../img/fondocurriculum.jpg');
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-size: cover;
+    background-position: center center;
+}
+@media(min-width:768px){
+    .curriculum{
+        grid-template-columns: repeat(2, 1fr);
+        background-attachment: fixed;
+    }
+}
+/*------------------*/
 .texto-nosotros{
     padding: 4rem;
     grid-row: 2/3;
@@ -394,6 +409,25 @@ footer{
 .biografia-artista h2 span {
     color: red;
 }
+.imagen-experiencia {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.imagen-experiencia img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.imagen-experiencia p {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #777;
+}
+
 
 .contenido-biografia {
     display: grid;
@@ -1281,4 +1315,180 @@ footer{
     .noticia-info {
         flex: 1;
     }
+}
+/* === ESTILOS PARA LA SECCIÓN DE CONTACTO === */
+.seccion-contacto {
+    padding: 4rem 0;
+}
+
+.contacto-titulo {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--azulClaro);
+    margin-bottom: 4rem;
+}
+
+.contacto-contenido {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .contacto-contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contacto-info {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 5px solid var(--azulClaro);
+}
+
+.contacto-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contacto-datos {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.contacto-datos h3 {
+    color: var(--azulClaro);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contacto-dato {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contacto-dato span {
+    font-weight: bold;
+    color: var(--azulOscuro);
+}
+
+.contacto-redes {
+    width: 100%;
+}
+
+.contacto-redes h4 {
+    font-size: 2rem;
+    color: var(--azulClaro);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.red-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--azulOscuro);
+    transition: transform 0.3s ease;
+}
+
+.red-social:hover {
+    transform: translateY(-5px);
+}
+
+.red-social img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.red-social span {
+    font-size: 1.4rem;
+}
+
+.contacto-mapa {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-mapa h3 {
+    color: var(--azulClaro);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+    width: 100% !important;
+    height: 400px !important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#map-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    .contacto-foto {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .contacto-datos h3 {
+        font-size: 2.2rem;
+    }
+    
+    .contacto-dato {
+        font-size: 1.6rem;
+    }
+    
+    .red-social img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .red-social span {
+        font-size: 1.2rem;
+    }
+    
+    .contacto-mapa h3 {
+        font-size: 2.2rem;
+    }
+    
+    #wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+        height: 300px !important;
+    }
+
 }
